@@ -20,19 +20,21 @@
 body {
     overflow-x: hidden;
     min-height: 100vh;
+    width: 100vw;
     background-color: var(--pistachio);
 }
 
 header {
     /* overflow: hidden; */
-    width: 100%;
+    width: 100vw;
     height: 100px;
     padding: 10px 40px;
     display: flex;
+    z-index: 10;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--sea-green);
-    position: fixed;
+    /* background-color: var(--sea-green); */
+    /* position: fixed; */
 }
 
 .logo > img {
@@ -142,20 +144,23 @@ header > .buscar > input {
 }
 
 .menuhamb {
+    /* display: none; */
+    transform: translateX(100%);
     min-width: 300px;
     max-width: 30%;
     height: 100vh;
     position: absolute;
     top: 0;
-    right: -50%;
+    right: 0;
 
     padding: 100px 20px 20px;
     background-color: hsla(123, 19%, 46%, 0.95);
 }
 
 .menuhamb.show {
-    
-    right: 0;
+    /* display: block; */
+    /* right: 0; */
+    transform: translateX(0);
 }
 
 .menuhamb > ul > li{
@@ -174,6 +179,29 @@ header > .buscar > input {
 
 .menuhamb > ul > li.buscar > input {
     width: 80%;
+}
+
+.container-blog {
+    height: 100vh;
+    padding: 20px 50px;
+    display: grid;
+    gap: 40px;
+    grid-template-areas: "h1 h1";
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.container-blog > h1 {
+    text-align: center;
+    grid-area: h1;
+}
+
+.container-blog > div{
+    height: 400px;
+}
+
+.container-blog > div > .img > img {
+    width: 200px;
+    
 }
 
 
