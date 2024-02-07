@@ -15,6 +15,8 @@
     box-sizing: border-box;
     font-family: 'Poppins', normal;
     transition: all .5s ease;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
 }
 
 body {
@@ -44,7 +46,7 @@ header {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
 ul, li {
@@ -125,18 +127,43 @@ main.introduce {
                          "introd foto-1"
                          "foto-2 foto-2";
     gap: 15px;
+
+    background-color: var(--pistachio);
 }
 
 main.introduce > .titulo {
     grid-area: titulo;
+    justify-self: center;
+    align-self: center;
+    font-size: 3em;
+    font-weight: 600;
 }
 
 main.introduce > .foto-1 {
+    margin: 50px;
     grid-area: foto-1;
+    background-image: url(images/Blog-1.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
-main.introduce > p {
+main.introduce > .p {
     grid-area: introd;
+    font-size: 1.2em;
+    padding: 30px 50px 0;
+}
+
+main.introduce > .p > p {
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+main.introduce > .p > a {
+    margin-left: 15px;
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-align: center;
+    background-color: var(--charcoal);
 }
 
 main.introduce > .foto-2 {
