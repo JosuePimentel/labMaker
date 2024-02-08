@@ -15,8 +15,8 @@
     box-sizing: border-box;
     font-family: 'Poppins', normal;
     transition: all .5s ease;
-    color: #fff;
-    text-shadow: 0 0 5px #000;
+    /* color: #fff; */
+    /* text-shadow: 0 0 5px #fff; */
 }
 
 body {
@@ -121,14 +121,13 @@ main.introduce {
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: 0.7fr 1.3fr 1fr;
     grid-template-areas: "titulo foto-1"
                          "introd foto-1"
-                         "introd foto-1"
-                         "foto-2 foto-2";
+                         "introd foto-1";
     gap: 15px;
 
-    background-color: var(--pistachio);
+    /* background-color: var(--pistachio); */
 }
 
 main.introduce > .titulo {
@@ -149,23 +148,28 @@ main.introduce > .foto-1 {
 
 main.introduce > .p {
     grid-area: introd;
-    font-size: 1.2em;
-    padding: 30px 50px 0;
+    padding: 50px 50px 0;
 }
 
 main.introduce > .p > p {
     text-align: justify;
+    font-size: 1.5em;
     margin-bottom: 50px;
 }
 
 main.introduce > .p > a {
-    margin-left: 15px;
+    font-size: 1.2em;
+    /* margin-left: 15px; */
     border-radius: 10px;
     padding: 10px 15px;
     text-align: center;
     background-color: var(--charcoal);
 }
 
-main.introduce > .foto-2 {
-    grid-area: foto-2;
+footer {
+    /* overflow: hidden; */
+    width: 100vw;
+    height: 200px;
+    padding: 10px 40px;
+    background-color: var(--sea-green);
 }
