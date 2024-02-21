@@ -1,0 +1,51 @@
+main.introduce {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.7fr 1.3fr 1fr;
+    grid-template-areas: "titulo foto-1"
+                         "introd foto-1"
+                         "introd foto-1";
+    gap: 15px;
+
+    /* background-color: var(--pistachio); */
+}
+
+main.introduce > .titulo {
+    grid-area: titulo;
+    justify-self: center;
+    align-self: center;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+main.introduce > .foto-1 {
+    margin: 50px;
+    grid-area: foto-1;
+    background-image: url(../images/Blog-1.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+main.introduce > .p {
+    grid-area: introd;
+    padding: 50px 50px 0;
+}
+
+main.introduce > .p > p {
+    text-align: justify;
+    font-size: 1.5em;
+    margin-bottom: 50px;
+}
+
+main.introduce > .p > a {
+    font-size: 1.2em;
+    /* margin-left: 15px; */
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-align: center;
+    background-color: var(--charcoal);
+}
+
+main.introduce > .p > a:hover {
+    font-weight: 600;
+}
